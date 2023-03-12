@@ -89,16 +89,22 @@ body {
 #info {
     position: absolute;
     z-index: -1;
-    transform: translateY(420px) translateX(5px);
+    transform: translateY(420px) translateX(-112px);
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+#info.entering {
+    animation: entering 1s forwards linear;
+}
+
+#info.entering-inverse {
+    animation: entering-inverse 800ms forwards linear;
+}
 #info .info-buttons {
     display: flex;
     width: 90px;
-    outline: 1px solid red;
     gap: 10px;
     justify-content: space-between;
     color: white;
@@ -152,5 +158,24 @@ body {
 
     to {
         rotate: 0deg;
+    }
+}
+@keyframes entering {
+    from {
+        transform: translateX(-112px) translateY(420px);
+    }
+
+    to {
+        transform: translateX(25px) translateY(420px);
+    }
+}
+
+@keyframes entering-inverse {
+    from {
+        transform: translateX(25px) translateY(420px);
+    }
+
+    to {
+        transform: translateX(-112px) translateY(420px);
     }
 }
