@@ -1,0 +1,126 @@
+body {
+    background-color: #222;
+    height: fit-content;
+    width: 100vw;
+    margin: 0;
+    font-family: system-ui;
+    overflow-x: hidden;
+}
+
+#main {
+    width: 100%;
+    overflow: hidden;
+}
+
+#square {
+    width: 100vw;
+    background-color: white;
+    transform-origin: top left;
+    padding-bottom: 30px;
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow: hidden;
+    cursor: pointer;
+    background-color: coral;
+    transform-origin: top left;
+    z-index: 1;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+#cross {
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 1;
+    display: grid;
+    place-items: center;
+    transform: translateY(-5px) translateX(5px);
+}
+
+#menu {
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
+    display: grid;
+    place-items: center;
+    transform: translateY(-5px) translateX(-10px);
+}
+
+#circle.rotate {
+    animation: rotate90 1s forwards linear;
+}
+
+#circle.rotate-inverse {
+    animation: rotate90-inverse 1s forwards linear;
+}
+
+#square.rotate {
+    animation: rotate 1s forwards linear;
+}
+
+#square.rotate-inverse {
+    animation: rotate-inverse 1s forwards linear;
+}
+
+#article {
+    width: 100%;
+    margin: -7.5% 0 0 13.5%;
+}
+
+.text {
+    width: 72.5%;
+}
+
+#imagen {
+    width: 72.5%;
+    aspect-ratio: 1000/667;
+    outline: 1px solid black;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: -21deg;
+    }
+}
+
+@keyframes rotate-inverse {
+    from {
+        rotate: -21deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@keyframes rotate90 {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: -69deg;
+    }
+}
+
+@keyframes rotate90-inverse {
+    from {
+        rotate: -69deg;
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
