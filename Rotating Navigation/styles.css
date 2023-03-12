@@ -36,6 +36,7 @@ body {
 
 .icon {
     font-size: 30px;
+    color: white;
 }
 
 #cross {
@@ -85,6 +86,35 @@ body {
     outline: 1px solid black;
 }
 
+#info {
+    position: absolute;
+    z-index: -1;
+    transform: translateY(420px) translateX(5px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#info .info-buttons {
+    display: flex;
+    width: 90px;
+    outline: 1px solid red;
+    gap: 10px;
+    justify-content: space-between;
+    color: white;
+}
+
+.info-buttons:nth-last-child(2) {
+    margin-left: 10px;
+}
+
+.info-buttons:last-child {
+    margin-left: 20px;
+}
+
+.info-text {
+    margin: 0;
+}
 @keyframes rotate {
     from {
         rotate: 0deg;
