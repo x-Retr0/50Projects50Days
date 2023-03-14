@@ -1,0 +1,68 @@
+body {
+    background-color: blueviolet;
+    width: 99vw;
+    height: 99vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    font-family: Roboto;
+}
+
+#contenedor {
+    width: fit-content;
+    background-color: #FFFFFF;
+    display: flex;
+    border-radius: 10px;
+}
+
+#barra {
+    height: 48px;
+    width: 200px;
+    margin: 10px 4px 10px 10px;
+    border-style: none;
+    outline-style: none;
+    font-size: 1.75rem;
+}
+
+#icono {
+    height: 50px;
+    aspect-ratio: 1;
+    margin: 10px 10px 10px 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#barra.estrecha {
+    animation: estrechar 300ms forwards;
+}
+
+#barra.ancha {
+    animation: anchar 300ms forwards;
+}
+
+@keyframes estrechar {
+    from {
+        width: 200px;
+        margin: 10px 4px 10px 10px;
+
+    }
+
+    to {
+        width: 0px;
+        margin: 10px 0px 10px 0;
+    }
+}
+
+@keyframes anchar {
+    from {
+        width: 0;
+        margin: 10px 0 10px 0;
+
+    }
+
+    to {
+        width: 200px;
+        margin: 10px 5px 10px 10px;
+
+    }
+}

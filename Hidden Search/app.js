@@ -1,9 +1,10 @@
-const lupa = document.getElementById("icon");
-const main = document.getElementById("container");
-let action = true;
+const barra = document.getElementById("barra");
+const contendor = document.getElementById("contenedor");
+const icono = document.getElementById("icono");
+let state = true;
 
-lupa.addEventListener("click", function () {
-  main.classList.toggle("encoger", action);
-  main.classList.toggle("estirar", !action);
-  action = !action;
-});
+function cambio() {
+  barra.classList.toggle("ancha", !state);
+  barra.classList.toggle("estrecha", state);
+  state = !state;
+}

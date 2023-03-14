@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/143f16ee8b.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Hidden Search</title>
 </head>
 
 <body>
-    <main id="container">
-        <input type="text" id="search-bar" placeholder="Search...">
-        <div id="icon" onclick="toggle()">
-            <i class="fa-solid fa-magnifying-glass icon"></i>
+    <div id="contenedor">
+        <input type="text" id="barra" placeholder="Search..." value="Sesadasdasd"></input>
+        <div id="icono" onclick="cambio()">
+            <svg id="search-icon" width="46" height="46" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"></path>
+                <path d="m21 21-6-6"></path>
+            </svg>
         </div>
-    </main>
+    </div>
     <script src="app.js"></script>
 </body>
 
