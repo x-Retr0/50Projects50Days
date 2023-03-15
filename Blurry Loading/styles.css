@@ -1,0 +1,70 @@
+body {
+    outline: 1px solid red;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    font-family: system-ui;
+    color: white;
+    margin: 0;
+}
+
+picture {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 2104∶1401;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: -110px;
+    filter: blur(20px);
+}
+
+#counter {
+    position: absolute;
+    width: 100px;
+    font-size: 4.5rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    aspect-ratio: 1;
+    animation: desvanecer 5000ms forwards linear;
+}
+
+img {
+    animation: unblur 5000ms forwards linear;
+}
+
+@keyframes unblur {
+    0% {
+        filter: blur(20);
+    }
+
+    80% {
+        filter: blur(10);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 100%;
+    }
+
+    90% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
